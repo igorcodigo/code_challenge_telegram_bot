@@ -54,6 +54,6 @@ Detailed instructions for setting up and running the bot locally, including sett
 1. Clone the repository: `git clone https://github.com/igorcodigo/code_challenge_telegram_bot`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Set up the necessary environment variables (Bot TOKEN, MongoDB URI).
-4. Run the bot: `python bot.py`
+4. Run the bot: `python main.py`
 
 This document serves as an overview and guide for setting up and testing the Telegram banking simulation bot.
