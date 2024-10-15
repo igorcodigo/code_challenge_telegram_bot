@@ -6,6 +6,7 @@ from telegram.ext import (
 from datetime import datetime
 import subprocess
 import sys
+import os
 
 
 # Defining states for the ConversationHandler
@@ -671,7 +672,8 @@ async def debug_restart(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
     # Executes the external script to restart the bot
-    script_path = 'reload.py'
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    script_path = os.path.join(dir_path, 'reload.py')
 
     def restart_bot():
         subprocess.Popen([sys.executable, script_path])

@@ -5,7 +5,9 @@ import time
 
 time.sleep(2)
 FLAG = "RESTARTED"
-main_script_path = 'main.py'
+dir_path = os.path.dirname(os.path.realpath(__file__))
+main_script_path  = os.path.join(dir_path, 'main.py')
+print(main_script_path)
 
 def check_process(pid_file):
     try:
