@@ -6,21 +6,16 @@ from dotenv import load_dotenv
 import pymongo
 from datetime import datetime
 
-# Logging Configuration
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-# Load environment variables from the .env file, if it exists
 load_dotenv()
 
-# Get environment variables
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 MONGO_URI = os.getenv('MONGO_URI')
 
-# Check if the necessary variables are defined
 if not all([TELEGRAM_BOT_TOKEN, MONGO_URI]):
     raise Exception("Please set the environment variables TELEGRAM_BOT_TOKEN and MONGO_URI.")
 
-# Connecting to MongoDB
 client = pymongo.MongoClient(MONGO_URI)
 db = client['bot_database']
 users_collection = db['users']
@@ -38,10 +33,8 @@ def main():
     # Create the bot application
     application = ApplicationBuilder().token(TELEGRAM_BOT_TOKEN).post_init(send_restart_message).build()
 
-    # Store the start time in bot_data
     application.bot_data['start_time'] = datetime.now()
 
-    # Set up the handlers
     setup_handlers(application, users_collection, settings_collection)
 
     # Start the bot
