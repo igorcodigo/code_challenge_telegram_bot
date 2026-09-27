@@ -1,5 +1,9 @@
 # Telegram Banking Bot
 
+<!-- repos-pai:inicio -->
+> **Repositório pai:** [`Projetos_Em_Inatividade__Arquivos_Inativos_Por_Ano__2024`](https://github.com/igorcodigo/Projetos_Em_Inatividade__Arquivos_Inativos_Por_Ano__2024) — pasta `Projetos_Em_Inatividade/Arquivos_Inativos_Por_Ano/2024`
+<!-- repos-pai:fim -->
+
 This repository contains the code for a Telegram bot that simulates a basic banking application, utilizing Python and MongoDB as a backend. The aim of this project is to demonstrate functionality, usability, and the integrity of the described operation flow.
 
 ## Proposed Future Enhancements
